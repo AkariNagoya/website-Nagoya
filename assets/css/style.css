@@ -1,0 +1,835 @@
+/**
+* File Name : style.css
+* Version : 1.0
+* Description : POSSE課題 完成版
+* Since : 2023-05-07
+*
+* ---- Table of Contents ----
+*
+* 1.0 - Common
+*    1.1 - カスタムプロパティ
+*    1.2 - ベーススタイル
+*    1.3 - 汎用スタイル
+*
+* 2.0 - Sections
+*    2.1 - ヘッダー
+*    2.2 - フッター
+*    2.3 - メインビジュアル
+*    2.4 - POSSEとは
+*    2.5 - イベント
+*    2.6 - 日常生活
+*    2.7 - 公式LINE
+*
+* 3.0 - Animation, JavaScript Object
+*    3.1 - フェードイン
+*    3.2 - スライダー
+*
+*/
+
+/* 1.0 - Common */
+/* ============================================ */
+
+/**
+ * 1.1 - カスタムプロパティ
+ *
+ * https://developer.mozilla.org/ja/docs/Web/CSS/Using_CSS_custom_properties
+ */
+
+/**
+ * 1.2 - ベーススタイル
+ */
+body {
+  color: #333333;
+}
+
+/**
+ * 1.3 - 汎用スタイル
+ */
+
+/* 2.0 - Sections */
+/* ============================================ */
+
+/**
+ * 2.1 - ヘッダー
+ */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding-right: 24px;
+  padding-left: 24px;
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.logo{
+  width: 148px;
+  height: 27.53px;
+  z-index: 100;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.header.clear{
+  background-color: transparent;
+  border: none;
+}
+
+.header.clear .logo,
+.header.clear .navigate li,
+.header.clear .img,
+.header.clear .hamburger{
+  filter: brightness(0) invert(1);
+} 
+
+.header.clear.open .logo,
+.header.clear.open .navigate li,
+.header.clear.open .img,
+.header.clear.open .hamburger{
+  filter: none;
+}
+
+
+
+.header.open .hamburger span:nth-child(1){
+  transform: rotate(45deg) translate(7.5px, 7.5px);
+  transition: 0.3s linear;
+  
+}
+.header.open .hamburger span:nth-child(2){
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.header.open .hamburger span:nth-child(3){
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.3s linear;
+}
+
+.nav{
+  text-align: right;
+  width: 421px;
+  height: 40px;
+  display: inline-block;
+}
+
+.navigate{
+  display: inline-flex;
+  margin: 7.5px;
+  margin-right: 48px;
+}
+
+  .explain{
+  display: inline-block;
+  color: #0071BC;
+  font-size: 14px;
+  font-weight: 700;
+  height: 25px;
+  line-height: 180%;
+  letter-spacing: 10%;
+  font-family: "Noto Sans JP", sans-serif;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.event{
+  display: inline-block;
+  color: #0071BC;
+  font-size: 14px;
+  font-weight: 700;
+  height: 25px;
+  line-height: 180%;
+  letter-spacing: 10%;
+  margin-right: 32px;
+  margin-left: 32px;
+  font-family: "Noto Sans JP", sans-serif;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.life{
+  display: inline-block;
+  color: #0071BC;
+  font-size: 14px;
+  font-weight: 700;
+  height: 25px;
+  line-height: 180%;
+  letter-spacing: 10%;
+  font-family: "Noto Sans JP", sans-serif;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.img{
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+.SNS{
+  width: 104px;
+  height: 40px;
+  display: inline-flex;
+  vertical-align: middle;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.wrap-icon{
+  display: inline;
+}
+
+
+/**
+ * 2.2 - フッター
+ */
+.footer{
+  width: fit-content;
+  margin:auto;
+  margin-top: 80px;
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.div{
+  width: 200px;
+  height: 170px;
+}
+
+.logo2{
+  width: 200px;
+  height: 38.83px;
+  margin-bottom: 10px;
+}
+
+.icon{
+  color: #666666;
+  width: 200px;
+  height: 25px;
+  display:flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.link{
+  color: #666666;
+  width: 15px;
+  height: 15px;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.text{
+  width: 140px;
+  height: 10px;
+  display: inline-block;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.site{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.SNS2{
+  width: 104px;
+  height: 40px;
+  gap: 15px;
+  display: flex;
+  margin-left: 48px;
+  margin-bottom: 10px;
+}
+
+.inner{
+  text-align: center;
+}
+
+.img2{
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.border {
+  height: 1px;
+  background-color: #ccc;
+  width: 100vw;
+  position: relative;
+  left: calc(-50vw + 50%);
+  margin: 24px 0;
+  transform: translateX(-8px);
+}
+
+
+small{
+  display: block;
+  width: 82px;
+  height: 15px;
+  color: #ADADAD;
+  margin: 0 auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/**
+ * 2.3 - メインビジュアル
+ */
+.mainvisual-inner{
+  height: 670px;
+  background-image: url(../img/bg-mainvisual.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper{
+  display: inline-block;
+  margin-top: 490px;
+  margin-left: 200px;
+  width: 620px;
+  max-width: 100%;
+}
+
+.mainvisual-head{
+  width: 540px;
+  height: 38px;
+  margin-bottom: 12px;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  padding-right: 4px;
+  padding-left: 20px;
+  font-size: 20px;
+  color: #0071BC;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.mainvisual-head2{
+  width: 100%;
+  height: 98px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 54px;
+  font-weight: 600;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.scroll{
+  width: 133px;
+  height: 21px;
+  display: inline-block;
+  margin: 0px 0px 0px 1110px;
+  color: #fff;
+  font-weight: 500;
+}
+
+/**
+ * 2.4 - POSSEとは
+ */
+.explain-section{
+  width: 980px;
+  height: 435px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.explain-title{
+  width: 201px;
+  height: 83px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.explain-up{
+  font-size: 36px;
+  font-weight: 700;
+  height: 54px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.explain-down{
+  font-size: 14px;
+  font-weight: 700;
+  color: #0071BC;
+  height: 29px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.two{
+  width: 980px;
+  height: 312px;
+  display: grid;
+  grid-template-columns: 470px 510px;
+}
+
+.explain-visual{
+  height: 312px;
+  background-image: url(../img/img-about.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 30px;
+}
+
+.explain-long{
+  height: 175px;
+  font-size:  14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 180%;
+  padding-left: 40px;
+  margin-top: 68.5px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+/**
+ * 2.5 - イベント
+ */
+.about-event{
+  margin-top: 120px;
+  overflow-x: clip;
+  padding: 0 2rem;
+}
+
+.three{
+  width:690px;
+  height: 173px;
+  margin: 0 auto;
+}
+
+.event-title{
+  width: 150px;
+  height: 83px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.event-up{
+  width: 150px;
+  height: 54px;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.event-down{
+  width: 45px;
+  height: 21px;
+  color: #0071BC;
+  font-size: 14px;
+  font-weight: 700; 
+  display: inline-block;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.event-lead{
+  width: 690px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin: 30px 0 0 0;
+  line-height: 180%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+
+.event-card .splide__track{
+  overflow: visible;
+}
+
+.event-card{
+  margin: 0 auto;
+  margin-top: 30px; 
+}
+
+.e-img2{
+  width: 320px;
+  height: 200px;
+}
+
+.e-img3{
+  width: 320px;
+  height: 200px;
+}
+
+.e-img4{
+  width: 320px;
+  height: 200px;
+}
+
+.e-img1{
+  width: 320px;
+  height: 200px;
+}
+
+.card1{
+  width: 320px;
+  height: 301px;
+  overflow: hidden;
+}
+
+.card1 img{
+  border-radius: 10px 10px 0 0 ;
+}
+
+.card-body{
+  width: 320px;
+  height: 101px;
+  background-color: #F7F9FB;
+  padding-top: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.month{
+  color: #fff;
+  background-color: #0071BC;
+  width: 55px;
+  height: 25px;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 3px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.month2{
+  color: #fff;
+  background-color: #0071BC;
+  width: 59px;
+  height: 25px;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 3px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.month3{
+  color: #fff;
+  background-color: #0071BC;
+  width: 118px;
+  height: 25px;
+  border-radius: 30px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 3px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.card-title{
+  font-weight: 700;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+/**
+ * 2.6 - 日常生活
+ */
+.four{
+  width: 779px;
+  height: 223px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+
+.Daily-title{
+  width: 150px;
+  height: 83px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.Daily-up{
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-down{
+  font-size: 14px;
+  font-weight: 700;
+  color: #0071BC;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-lead{
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 180%;
+  letter-spacing: 5%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-card1{
+  display: flex;
+  margin-top: 40px;
+}
+
+.Daily-text1{
+  width: 940px;
+  height: 324px;
+  background-color: #F7F9FB;
+  margin-left: 120px;
+  border-radius: 20px 0 20px 20px;
+}
+
+span{
+  color: #0071BC;
+  font-size: 58px;
+  font-weight: 700;
+  width: 68px;
+  height: 58px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.meetup{
+  font-size: 24px;
+  font-weight: 700;
+  padding: 40px 0 0 40px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.list-box{
+  margin: 20px 0 0 40px;
+  width: 388px;
+  height: 70px;
+}
+
+.Daily-list{
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 10%;
+  padding: 10px 0 0 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-list::before{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/icon-check.svg);
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.Daily-detail1{
+  line-height: 180%;
+  letter-spacing: 5%;
+  padding-left: 40px;
+  margin-top: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-img1{
+  width: 480px;
+  height: 320px;
+  margin: -40px 0 0 -410px;
+  border-radius: 20px;
+}
+
+.Daily-card2{
+  display: flex;
+  margin-top: 120px;
+  flex-direction: row-reverse;
+  margin-right: 140px;
+}
+
+.Daily-text2{
+  width: 940px;
+  height: 324px;
+  background-color: #F7F9FB;
+  border-radius: 20px;
+}
+
+.study{
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 470px;
+  padding-top: 40px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-img2{
+  width: 480px;
+  height: 320px;
+  margin: -40px -400px 0 0;
+  border-radius: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.Daily-detail2{
+  margin-left: 470px;
+  width: 440px;
+  height: 50px;
+  line-height: 180%;
+  letter-spacing: 5%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-list2{
+  padding: 25px 0 15px 470px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-list2::before{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/icon-check.svg);
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.Daily-img3{
+  width: 480px;
+  height: 320px;
+  margin: -40px 0 0 -410px;
+  border-radius: 20px;
+}
+
+.study2{
+  font-size: 24px;
+  font-weight: 700;
+  padding: 40px 0 0 40px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-card3{
+  display: flex;
+  margin-top: 120px;
+}
+
+.Daily-detail3{
+  width: 485px;
+  line-height: 180%;
+  letter-spacing: 5%;
+  padding-left: 40px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-list3{
+  padding: 25px 0 15px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 10%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Daily-list3::before{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/icon-check.svg);
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  vertical-align: middle
+}
+/**
+ * 2.7 - 公式LINE
+ */
+.line-section{
+  margin-top: 160px;
+  background-image: url(../img/bg-cta.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 333px;
+  text-align: center;
+}
+
+.line-title{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.line-icon2{
+  width: 40px;
+  height: 40px;
+  margin-top: 40px;
+  padding-top: 8px;
+}
+
+.line-lead{
+  color: #fff;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 5%;
+  line-height: 180%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.button{
+  text-align: center;
+  margin-top: 32px;
+}
+
+.add-line{
+  display: inline-block;
+  width: 315px;
+  height: 56px;
+  color: #0071BC;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 2px solid #0071BC;
+}
+
+.add-line:hover{
+  background-color: #0071BC;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.add-text{
+  text-align: center;
+  line-height: 330%;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 10%;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+small{
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+
+/* 3.0 - Animation, JavaScript Object */
+/* ============================================ */
+
+/**
+ * 3.1 - フェードイン
+ */
+
+/**
+ * 3.2 - スライダー
+ */

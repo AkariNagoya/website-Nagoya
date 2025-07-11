@@ -1,0 +1,458 @@
+/**
+* File Name : style.css
+* Description : POSSE課題(SP)
+*
+* ---- Table of Contents ----
+*
+* 1.0 - Common
+*    1.1 - カスタムプロパティ
+*    1.2 - ベーススタイル
+*    1.3 - 汎用スタイル
+*
+* 2.0 - Sections
+*    2.1 - ヘッダー
+*    2.2 - フッター
+*    2.3 - メインビジュアル
+*    2.4 - POSSEとは
+*    2.5 - イベント
+*    2.6 - 日常生活
+*    2.7 - 公式LINE
+*
+* 3.0 - Animation, JavaScript Object
+*    3.1 - フェードイン
+*    3.2 - スライダー
+*
+*/
+
+/* ===================================================
+  レスポンシブ
+=================================================== */
+
+  /* 1.0 - Common */
+  /* ============================================ */
+  /**
+
+  * 1.2 - ベーススタイル
+  */
+
+  /**
+  * 1.3 - 汎用スタイル
+  */
+
+  /* 2.0 - Sections */
+  /* ============================================ */
+
+  /**
+  * 2.1 - ヘッダー
+  */
+@media (max-width: 768px) {
+  .header{
+    height: 48px;
+    width: 100%;
+  }
+
+  .hamburger{
+    width: 42px;
+    height: 42px;
+    z-index: 120;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    padding-left: 10px;
+  }
+
+  .hamburger span{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #0071BC;
+  }
+
+  .hamburger span:nth-child(1){
+    top: -7px;
+  }
+
+  .hamburger span:nth-child(2){
+    top: 0px;
+  }
+
+  .hamburger span:nth-child(3){
+    top: 7px;
+  }
+
+
+  .nav{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #F7F9FB;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s linear, visibility 0.3s linear;
+    z-index: 90;
+  }
+
+  .header.open .nav{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .wrap-icon{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-button{
+  text-align: center;
+  order: 1;
+  }
+
+  .nav-site{
+    order: 2;
+  }
+
+  .navigate{
+    display: block;
+    text-align: center;
+    margin: 120px 0 120px 0;
+  }
+
+  .explain{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .event{
+    display: block;
+    width: 100%;
+    margin: 32px 0 32px 0;
+    font-size: 18px;
+  }
+
+  .life{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .icon{
+    margin: 40px auto 0;
+  }
+
+  .SNS{
+    order: 3;
+    margin: 24px auto 0;
+  }
+
+  .button-site{
+  margin: 0 auto;
+  text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-button{
+    display: none;
+  }
+
+  .nav-site{
+    display: none;
+  }
+
+}
+      
+  /**
+  * 2.2 - フッター
+  */
+
+  /**
+  * 2.3 - メインビジュアル
+  */
+@media (max-width: 768px) {
+  .mainvisual-inner{
+    background-image: url(../../img/sp/bg-mainvisual.jpg);
+    background-size: cover;
+    height: 380px;
+  }
+
+  .wrapper{
+    margin: 285px 0 0 0;
+    padding-left: 10px;
+  }
+
+  .mainvisual-head{
+    width: 310px;
+    height: 22px;
+    font-size: 10.5px;
+    padding: 0 0 0 8px;
+  }
+
+  .mainvisual-head2{
+    width: 310px;
+    height: 47px;
+    font-size: 27px;
+    padding: 0 0 0 8px;
+  }
+
+  .scroll{
+    display: none;
+  }
+}
+
+  /**
+  * 2.4 - POSSEとは
+  */
+@media (max-width: 768px){
+  .explain-section{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .explain-title{
+    margin: 0 0 20px 120px;
+    width: 134px;
+    height: 55px;
+  }
+
+  .explain-up{
+    font-size: 100%;
+    height: 36px;
+    font-size: 24px;
+  }
+
+  .explain-down{
+    font-size: 100%;
+    height: 15px;
+    font-size: 10px;
+  }
+
+  .two{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 375px;
+    height: auto;
+  }
+
+  .explain-visual{
+    background-size: contain;
+    width: 351px;
+    height: 233px;
+    margin: 0 auto;
+  }
+
+  .explain-long{
+    width: 95%;
+    margin: 20px auto 0;
+    padding: 0;
+    height: 250px;
+  }
+}
+  /**
+  * 2.5 - イベント
+  */
+@media (max-width: 768px) {
+  .about-event{
+    margin-top: 80px;
+  }
+
+  .three{
+    margin: 0  auto 20px;
+    width: 353px;
+    height: 175px;
+  }
+
+  .event-title{
+    margin: 0 0 20px 100px;
+  }
+
+  .event-lead{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .event-card{
+    white-space: nowrap;
+    height: 301px;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .event-image{
+    display: flex;
+    width: 100%;
+    height: 301px;
+    margin-left: 25px;
+  }
+  
+  .card1{
+    flex: 0 0 100%;
+    width: 320px;
+    height: 301px;
+  }
+
+  .card1 img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-body{
+    border-radius: 0 0 10px 10px;
+  }
+}
+  /**
+  * 2.6 - 日常生活
+  */
+@media (max-width:768px) {
+  .four{
+    width: 359px;
+    height: 300px;
+    margin: 80px auto 0;
+  }
+
+  .Daily-title{
+    width: 359px;
+    margin: 0 0 20px 0;
+    height: 55px;
+  }
+
+  .Daily-lead{
+    text-align: left;
+    letter-spacing: 5%;
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .br2{
+    display: none;
+  }
+
+  .Daily-card1{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 320px;
+    margin: 0;
+    flex: 0 0 100%;
+  }
+  .Daily-text1{
+    width: 320px;
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .Daily-img1{
+    margin: 0;
+    width: 320px;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .Daily-detail1{
+    padding: 0;
+    width: 290px;
+    margin: 0 auto;
+  }
+
+  .Daily-card2{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 320px;
+    margin: 0;
+    flex: 0 0 100%;
+  }
+
+    .Daily-text2{
+    width: 320px;
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .study{
+    margin: 0;
+    padding-left: 40px;
+  }
+
+  .Daily-list2{
+    padding: 0 0 0 40px;
+    margin: 20px 0 15px 0;
+  }
+
+  .Daily-detail2{
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+  }
+
+  .Daily-img2{
+    margin: 0;
+    width: 320px;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .Daily-card3{
+    display: flex;
+    flex-direction: column-reverse;
+    width: 320px;
+    margin: 0;
+    flex: 0 0 100%;
+  }
+  .Daily-text3{
+    width: 320px;
+    margin: 0;
+  }
+
+  .Daily-img3{
+    margin: 0;
+    width: 320px;
+    height: 200px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .Daily-detail3{
+    width: 300px;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .list-box{
+    width: 250px;
+  }
+}
+  /**
+  * 2.7 - 公式LINE
+  */
+@media (max-width: 768px) {
+  .line-section{
+    background-image: url(../../img/sp/bg-cta.jpg);
+    height: 360px;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  .line-lead{
+    width: 345px;
+    height: 99px;
+    text-align: left;
+    margin: 16px auto 0;
+  }
+
+  .line-br{
+    display: none;
+  }
+}
+  /* 3.0 - Animation, JavaScript Object */
+  /* ============================================ */
+
+  /**
+  * 3.1 - フェードイン
+  */
+
+  /**
+  * 3.2 - スライダー
+  */
+
