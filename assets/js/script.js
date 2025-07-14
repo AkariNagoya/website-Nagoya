@@ -35,13 +35,7 @@ new Splide('#slider1',{
   }
 }).mount();
 
-let Splide = null;
 
-function initSplide(){
-  let mobile = window.innerWidth <= 768;
-
-  if 
-}
 
 
 

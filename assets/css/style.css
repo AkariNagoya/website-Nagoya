@@ -449,14 +449,14 @@ small{
 }
 
 
-.event-card .splide__track{
+/* .event-card .splide__track{
   overflow: visible;
-}
+} */
 
-.event-card{
+/* .event-card{
   margin: 0 auto;
   margin-top: 30px; 
-}
+} */
 
 .e-img2{
   width: 320px;
