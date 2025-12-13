@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.pseudo-element {
+  font-size: 40px;
+}
+
+/* ↓ ここに追記 ↓ */
+.pseudo-element::after{
+  content: "";
+  width: 322px;
+  height: 4px;
+  background-color: red;
+  bottom: -0px;
+  position: relative;
+  display: block;
+}
