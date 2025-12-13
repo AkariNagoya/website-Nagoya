@@ -95,8 +95,6 @@ body {
   filter: none;
 }
 
-
-
 .header.open .hamburger span:nth-child(1){
   transform: rotate(45deg) translate(7.5px, 7.5px);
   transition: 0.3s linear;
@@ -187,7 +185,6 @@ body {
   display: inline;
 }
 
-
 /**
  * 2.2 - フッター
  */
@@ -272,7 +269,6 @@ body {
   margin: 24px 0;
   transform: translateX(-8px);
 }
-
 
 small{
   display: block;
@@ -402,8 +398,6 @@ small{
  */
 .about-event{
   margin-top: 120px;
-  overflow-x: clip;
-  padding: 0 2rem;
 }
 
 .three{
@@ -448,6 +442,10 @@ small{
   font-family: "Noto Sans JP", sans-serif;
 }
 
+.slide-wrapper{
+  overflow-x: clip;
+  padding: 0 2rem;
+}
 
 .event-card .splide__track{
   overflow: visible;
@@ -481,7 +479,6 @@ small{
 .card1{
   width: 320px;
   height: 301px;
-  overflow: hidden;
 }
 
 .card1 img{
@@ -583,7 +580,6 @@ small{
 
 .Daily-card1{
   display: flex;
-  margin-top: 40px;
 }
 
 .Daily-text1{
@@ -649,11 +645,10 @@ span{
   border-radius: 20px;
 }
 
+
 .Daily-card2{
   display: flex;
-  margin-top: 120px;
   flex-direction: row-reverse;
-  margin-right: 140px;
 }
 
 .Daily-text2{
@@ -723,7 +718,6 @@ span{
 
 .Daily-card3{
   display: flex;
-  margin-top: 120px;
 }
 
 .Daily-detail3{
@@ -751,6 +745,7 @@ span{
   background-size: contain;
   vertical-align: middle
 }
+
 /**
  * 2.7 - 公式LINE
  */
@@ -833,3 +828,30 @@ small{
 /**
  * 3.2 - スライダー
  */
+.splide__arrows .splide__arrow--prev,
+.splide__arrows .splide__arrow--next{
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid #0071BC;
+}
+
+.splide__arrow--next svg path,
+.splide__arrow--prev svg path{
+  stroke: #0071BC;
+  fill: #0071BC;
+}
+
+.splide .splide__pagination{
+  bottom: -30px;
+}
+
+.splide .splide__pagination__page{
+  background: #fff;
+  border: 1px solid #0071BC;
+}
+
+.splide .splide__pagination__page.is-active{
+  background: #0071BC;
+  border: 1px solid #0071BC;
+}

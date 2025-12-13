@@ -30,18 +30,29 @@ new Splide('#slider1',{
   breakpoints: {
     768: {
       perPage: 1,
-      padding: { left: 0 , right: 0 }
+      padding: { left: 0 , right: 0 },
+      pagination: true,
     }
   }
 }).mount();
 
-let Splide = null;
+new Splide('#slider2',{
+  type: 'loop',
+  perPage: 1,
+  gap: '40px',
+  padding: { left: '28px', right: '28px' },
+  width: '375px',
+  height: '475px',
+  mediaQuery: 'min',
+  breakpoints: {
+    768: {
+      destroy: true,
+    }
+  }
+}).mount();
 
-function initSplide(){
-  let mobile = window.innerWidth <= 768;
 
-  if 
-}
+
 
 
 

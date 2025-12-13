@@ -245,7 +245,7 @@
   }
 
   .explain-long{
-    width: 95%;
+    width: 96%;
     margin: 20px auto 0;
     padding: 0;
     height: 250px;
@@ -296,7 +296,7 @@
     height: 301px;
   }
 
-  .card1 img {
+  .event-image .card1 img {
     border-radius: 10px 10px 0 0;
   }
 
@@ -336,12 +336,21 @@
     flex-direction: column-reverse;
     width: 320px;
     margin: 0;
-    flex: 0 0 100%;
+    flex: 1 0 auto;
   }
   .Daily-text1{
     width: 320px;
     margin: 0;
     border-radius: 0 0 20px 20px;
+    height: 275px;
+  }
+
+  .meetup{
+  padding: 20px 0 0 40px;
+  }
+
+  .meetup span{
+    font-size: 40px;
   }
 
   .Daily-img1{
@@ -357,23 +366,28 @@
     margin: 0 auto;
   }
 
+
   .Daily-card2{
     display: flex;
     flex-direction: column-reverse;
     width: 320px;
-    margin: 0;
-    flex: 0 0 100%;
+    flex: 1 0 auto;
   }
 
     .Daily-text2{
     width: 320px;
     margin: 0;
     border-radius: 0 0 20px 20px;
+    height: 275px;
   }
 
   .study{
     margin: 0;
-    padding-left: 40px;
+    padding: 20px 0 0 40px;
+  }
+
+  .study span{
+    font-size: 40px;
   }
 
   .Daily-list2{
@@ -382,7 +396,7 @@
   }
 
   .Daily-detail2{
-    margin: 0 auto;
+    margin: 25px auto;
     width: 300px;
     height: auto;
   }
@@ -401,9 +415,13 @@
     margin: 0;
     flex: 0 0 100%;
   }
-  .Daily-text3{
-    width: 320px;
-    margin: 0;
+
+  .study2{
+    padding: 20px 0 0 40px;
+  }
+
+  .study2 span{
+    font-size: 40px;
   }
 
   .Daily-img3{
@@ -411,6 +429,10 @@
     width: 320px;
     height: 200px;
     border-radius: 20px 20px 0 0;
+  }
+
+  .Daily-list3{
+    padding: 20px 0 15px 40px;
   }
 
   .Daily-detail3{
@@ -421,8 +443,24 @@
 
   .list-box{
     width: 250px;
+    margin: 20px 0 12px 40px;
   }
 }
+
+@media (min-width: 768px) {
+.Daily-flow .Daily-card1{
+  margin-top: 40px;
+  }
+
+  .Daily-flow .Daily-card2{
+    margin: 120px 140px 0 0;
+  }
+
+  .Daily-flow .Daily-card3{
+    margin-top: 120px;
+  }
+}
+
   /**
   * 2.7 - 公式LINE
   */
